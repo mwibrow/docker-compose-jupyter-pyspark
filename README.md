@@ -21,3 +21,6 @@ To get the logs (in order to see the Jupyter access token) use:
 ```
 docker-compose logs -f --tail 100 pyspark-notebook
 ```
+
+Currently the default user directory of the container
+is mapped to `./docker/volumes/pyspark-notebook`.
