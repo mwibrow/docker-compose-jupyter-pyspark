@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+  pyspark-notebook:
+    networks:
+      - default
+    build:
+      context: docker/images/pyspark-notebook
+      dockerfile: Dockerfile
+    restart: always
+    container_name: pyspark-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - "./docker/volumes/pyspark-notebook/:/home/jovyan/"
+networks:
+  default:
+    name: jupyter
