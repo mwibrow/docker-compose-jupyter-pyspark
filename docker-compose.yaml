@@ -5,7 +5,7 @@ services:
     networks:
       - default
     build:
-      context: docker/images/pyspark-notebook
+      context: docker/images/pyspark-notebook/
       dockerfile: Dockerfile
     restart: always
     container_name: pyspark-notebook
