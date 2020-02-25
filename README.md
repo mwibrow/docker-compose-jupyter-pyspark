@@ -3,6 +3,9 @@
 Simple example of using docker-compose to set up the
 [jupyter/pyspark-notebook](https://github.com/jupyter/docker-stacks/tree/master/pyspark-notebook) image with a local volume.
 
+This enables files to be exchanged between the container
+and the host machine.
+
 ## Get started
 
 Use the following command at the root of the project:
