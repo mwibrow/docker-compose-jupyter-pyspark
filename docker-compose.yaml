@@ -14,6 +14,21 @@ services:
       - "8888:8888"
     volumes:
       - "./docker/volumes/pyspark-notebook/:/home/jovyan/"
+  neo4j:
+    networks:
+      - default
+    build:
+      context: docker/images/neo4j/
+      dockerfile: Dockerfile
+    image: neo4j
+    restart: always
+    container_name: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - "./docker/volumes/neo4j/:/data/"
+
 networks:
   default:
     name: jupyter
